@@ -2,21 +2,35 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.Container {
+  max-width: 690px;
+  margin: 30px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html, body {
+  background-color: rgb(114, 0, 235);
 }
 
-.App-link {
-  color: #09d3ac;
+canvas {
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.08);
+  transition: all 0.22s ease-out;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 2rem;
+}
+
+.Thresholds__parent {
+  text-align: left;
+  padding-bottom: 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (max-width: 525px) {
+  .Thresholds__input {
+    margin-top: 1rem;
+  }
 }
