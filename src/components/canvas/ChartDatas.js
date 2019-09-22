@@ -26,6 +26,7 @@ const ChartDatas = ({ data, threshold, t }) => {
   return (
     <>
       <Chart
+        backgroundColor="rgb(255, 99, 132, 0.5)"
         color="rgb(255, 99, 132)"
         data={data}
         fill={false}
