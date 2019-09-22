@@ -29,11 +29,11 @@ export default class Chart extends Component {
       data: {
         labels,
         datasets: [{
-          label: label,
-          fill: fill,
           backgroundColor: backgroundColor || color,
-          borderColor: color,
           data: data,
+          fill: fill,
+          label: label,
+          borderColor: color,
           lineTension: 0,
           steppedLine: steppedLine,
         }]
@@ -41,14 +41,14 @@ export default class Chart extends Component {
       options: {
         elements: {
           point: {
-            radius: 0
+            radius: 0,
           }
         },
         scales: {
           yAxes: [{
             ticks: {
               beginAtZero: true,
-              stepSize: stepSize || 4
+              stepSize: stepSize || 4,
             }
           }]
         }
