@@ -85,6 +85,7 @@ label {
 @media (max-width: 375px) {
   .Container {
     margin-left: 7%;
+    margin-bottom: 3rem;
   }
 }
 
