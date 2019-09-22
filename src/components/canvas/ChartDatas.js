@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Chart from './Chart';
 
-const ChartDatas = ({ data, threshold }) => {
+const ChartDatas = ({ data, threshold, t }) => {
   // handling peak detection function
   const handlePeakDetection = (data, threshold) => {
     const parsedDatas = [];
@@ -29,7 +29,7 @@ const ChartDatas = ({ data, threshold }) => {
         color="rgb(255, 99, 132)"
         data={data}
         fill={false}
-        label="Actual Data"
+        label={t("Actual Data")}
         steppedLine={false}
         stepSize={5}
       />
@@ -37,8 +37,8 @@ const ChartDatas = ({ data, threshold }) => {
         backgroundColor="rgba(54, 162, 235, 0.5)"
         color="rgb(54, 162, 235)"
         data={datas}
-        fill
-        label="Areas of interest"
+        fill={true}
+        label={t("Areas of interest")}
         steppedLine={false}
         stepSize={0.5}
       />
@@ -49,6 +49,7 @@ const ChartDatas = ({ data, threshold }) => {
 ChartDatas.propTypes = {
   data: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
   threshold: PropTypes.number.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
 export default ChartDatas;
