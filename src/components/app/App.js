@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import RawDatas from '../../datas/SimpleDatas';
-import ChartDatas from './ChartDatas';
+import ChartDatas from '../canvas/ChartDatas';
 import './App.css';
 
 const App = () => {
