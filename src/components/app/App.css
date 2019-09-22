@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+.Container {
+  max-width: 690px;
+  margin: 30px auto;
+}
+
+html, body {
+  background-color: rgb(114, 0, 235);
+}
+
+canvas {
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.08);
+  transition: all 0.22s ease-out;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 2rem;
+}
+
+.Thresholds__parent {
+  text-align: left;
+  padding-bottom: 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (max-width: 525px) {
+  .Thresholds__input {
+    margin-top: 1rem;
+  }
+}
