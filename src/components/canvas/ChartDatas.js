@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Chart from './Chart';
 
-const ChartDatas = ({ data, threshold }) => {
+const ChartDatas = ({ data, threshold, t }) => {
   // handling peak detection function
   const handlePeakDetection = (data, threshold) => {
     const parsedDatas = [];
@@ -37,7 +37,7 @@ const ChartDatas = ({ data, threshold }) => {
         backgroundColor="rgba(54, 162, 235, 0.5)"
         color="rgb(54, 162, 235)"
         data={datas}
-        fill
+        fill={true}
         label="Areas of interest"
         steppedLine={false}
         stepSize={0.5}

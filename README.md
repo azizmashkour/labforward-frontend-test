@@ -3,7 +3,7 @@
 This project was generated with [Create React apps with no build configuration](https://github.com/facebook/create-react-app)
 
 ## Libraries used
-- material-ui: Used for the styles [read more here](https://material-ui.com/)
+- chart.js: Used for the Data visualization [read more here](https://www.createwithdata.com/react-chartjs-dashboard/)
 - i18next: Used for i18n browser translation (french and english). [read more here](https://react.i18next.com/)
 - enzyme: Used for testing. [read more here](https://airbnb.io/enzyme/)
 
