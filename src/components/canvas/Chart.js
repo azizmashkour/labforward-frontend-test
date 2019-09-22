@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ChartJs from 'chart.js';
 
 export default class Chart extends Component {
@@ -69,3 +70,12 @@ export default class Chart extends Component {
     );
   }
 }
+
+Chart.propTypes = {
+  color: PropTypes.string.isRequired,
+  data: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
+  fill: PropTypes.bool.isRequired,
+  label: PropTypes.string.isRequired,
+  steppedLine: PropTypes.bool.isRequired,
+  stepSize: PropTypes.number.isRequired,
+};
