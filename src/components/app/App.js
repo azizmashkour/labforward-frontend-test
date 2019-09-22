@@ -33,7 +33,7 @@ const App = ({lang, i18n, t}) => {
       <div className="App">
         <h1 className="Lab__title">{t('Sudden peaks detection')}</h1>
         <div className="md8">
-          <ChartDatas threshold={state.defaultThreshold} data={RawDatas.batch1} t={t} />
+          <ChartDatas threshold={state.defaultThreshold} data={RawDatas.batch1} />
         </div>
         <div className="md4">
           <h2 className="Setting__title">{t('Settings')}</h2>

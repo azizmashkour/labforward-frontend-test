@@ -29,7 +29,7 @@ const ChartDatas = ({ data, threshold, t }) => {
         color="rgb(255, 99, 132)"
         data={data}
         fill={false}
-        label={t("Actual Data")}
+        label="Actual Data"
         steppedLine={false}
         stepSize={5}
       />
@@ -38,7 +38,7 @@ const ChartDatas = ({ data, threshold, t }) => {
         color="rgb(54, 162, 235)"
         data={datas}
         fill={true}
-        label={t("Areas of interest")}
+        label="Areas of interest"
         steppedLine={false}
         stepSize={0.5}
       />
@@ -49,7 +49,6 @@ const ChartDatas = ({ data, threshold, t }) => {
 ChartDatas.propTypes = {
   data: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
   threshold: PropTypes.number.isRequired,
-  t: PropTypes.func.isRequired,
 };
 
 export default ChartDatas;
