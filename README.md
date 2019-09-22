@@ -3,15 +3,14 @@
 This project was generated with [Create React apps with no build configuration](https://github.com/facebook/create-react-app)
 
 ## Libraries used
-- material-ui: Used for the styles [read more here](https://material-ui.com/)
+- chart.js: Used for the Data visualization [read more here](https://www.createwithdata.com/react-chartjs-dashboard/)
 - i18next: Used for i18n browser translation (french and english). [read more here](https://react.i18next.com/)
 - enzyme: Used for testing. [read more here](https://airbnb.io/enzyme/)
 
 ## Getting Started
+1- Clone or download this project from the repository.
 
-Need to install project dependencies depending on your packages manager
-
-Run `npm install` Or `yarn`
+2- After cloning you need to install project dependencies depending on your packages manager by running `npm install` Or `yarn`.
 
 ## Development server
 
@@ -30,7 +29,7 @@ Run `npm run test` or `yarn test` to execute the unit tests via [Karma](https://
 This project is setup to be build by [TravisCI](https://travis-ci.com/) after every deployment on Github
 
 ## Demo
-You will find the working project [here](https://www.heroku.com#/)
+You will find a Demo or the working project [here](https://labforward.herokuapp.com)
 
 ## Other details
-Nothing for the moment 😉.
+Don't hesitate to put any comment here 😉.

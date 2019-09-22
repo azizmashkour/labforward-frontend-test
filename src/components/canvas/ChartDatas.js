@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Chart from './Chart';
 
-const ChartDatas = ({data, threshold}) => {
-
+const ChartDatas = ({ data, threshold, t }) => {
   // handling peak detection function
   const handlePeakDetection = (data, threshold) => {
     const parsedDatas = [];
@@ -19,30 +19,37 @@ const ChartDatas = ({data, threshold}) => {
       parsedDatas.push(last);
     }
     return parsedDatas;
-  }
+  };
 
   const datas = handlePeakDetection(data, threshold);
 
-    return (
-      <Fragment>
-        <Chart
-          color={'rgb(255, 99, 132)'}
-          data={data}
-          fill={false}
-          label='Actual Data'
-          steppedLine={false}
-        />
-        <Chart
-          backgroundColor={'rgba(54, 162, 235, 0.5)'}
-          color={'rgb(54, 162, 235)'}
-          data={datas}
-          fill={true}
-          label='Areas of interest'
-          steppedLine={'before'}
-          stepSize={0.5}
-        />
-      </Fragment>
-    );
-}
+  return (
+    <>
+      <Chart
+        backgroundColor="rgb(255, 99, 132, 0.5)"
+        color="rgb(255, 99, 132)"
+        data={data}
+        fill={false}
+        label="Actual Data"
+        steppedLine={false}
+        stepSize={5}
+      />
+      <Chart
+        backgroundColor="rgba(54, 162, 235, 0.5)"
+        color="rgb(54, 162, 235)"
+        data={datas}
+        fill={true}
+        label="Areas of interest"
+        steppedLine={false}
+        stepSize={0.5}
+      />
+    </>
+  );
+};
+
+ChartDatas.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
+  threshold: PropTypes.number.isRequired,
+};
 
 export default ChartDatas;
