@@ -1,4 +1,5 @@
 # Data analysis
+[![Build Status](https://travis-ci.org/azizmashkour/labforward-frontend-test.svg?branch=master)](https://travis-ci.org/azizmashkour/labforward-frontend-test)
 
 This project was generated with [Create React apps with no build configuration](https://github.com/facebook/create-react-app)
 
