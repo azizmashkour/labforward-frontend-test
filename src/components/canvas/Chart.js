@@ -9,7 +9,6 @@ export default class Chart extends Component {
   }
 
   componentDidMount() {
-
     const {
       backgroundColor,
       color,
@@ -20,7 +19,7 @@ export default class Chart extends Component {
       stepSize,
     } = this.props;
 
-    let labels = Array.from(Array(data.length), (x, i) => i + 1);
+    const labels = Array.from(Array(data.length), (x, i) => i + 1);
 
     this.chartRef.current.height = 100;
 
@@ -30,35 +29,35 @@ export default class Chart extends Component {
         labels,
         datasets: [{
           backgroundColor: backgroundColor || color,
-          data: data,
-          fill: fill,
-          label: label,
+          data,
+          fill,
+          label,
           borderColor: color,
           lineTension: 0,
-          steppedLine: steppedLine,
-        }]
+          steppedLine,
+        }],
       },
       options: {
         elements: {
           point: {
             radius: 0,
-          }
+          },
         },
         scales: {
           yAxes: [{
             ticks: {
               beginAtZero: true,
               stepSize: stepSize || 4,
-            }
-          }]
-        }
-      }
+            },
+          }],
+        },
+      },
     });
   }
 
   componentDidUpdate() {
     const { data } = this.props;
-    let labels = Array.from(Array(this.props.data.length), (x, i) => i + 1);
+    const labels = Array.from(Array(data.length), (x, i) => i + 1);
     this.myChart.labels = labels;
     this.myChart.data.datasets[0].data = data;
     this.myChart.update();
@@ -72,6 +71,7 @@ export default class Chart extends Component {
 }
 
 Chart.propTypes = {
+  backgroundColor: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   data: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
   fill: PropTypes.bool.isRequired,
