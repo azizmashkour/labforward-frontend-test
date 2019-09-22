@@ -32,7 +32,7 @@ const ChartDatas = ({ data, threshold, t }) => {
         fill={false}
         label="Actual Data"
         steppedLine={false}
-        stepSize={5}
+        stepSize={2}
       />
       <Chart
         backgroundColor="rgba(54, 162, 235, 0.5)"
@@ -41,7 +41,7 @@ const ChartDatas = ({ data, threshold, t }) => {
         fill={true}
         label="Areas of interest"
         steppedLine={false}
-        stepSize={0.5}
+        stepSize={0.25}
       />
     </>
   );
