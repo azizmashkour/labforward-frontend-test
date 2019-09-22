@@ -82,17 +82,25 @@ label {
   font-size: 14px;
 }
 
+@media (max-width: 375px) {
+  .Container {
+    margin-left: 7%;
+  }
+}
+
 @media (max-width: 525px) {
   .Thresholds__input {
     margin-top: 1rem;
   }
 }
+
 @media (max-width: 1128px) {
   .md4, .md8 {
     width: 100%;
     float: none;
   }
 }
+
 @media (max-width: 715px) {
   .Lab__title {
     font-size: 2.5rem;
