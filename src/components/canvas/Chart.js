@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ChartJs from 'chart.js';
 
 export default class Chart extends Component {
@@ -28,11 +29,11 @@ export default class Chart extends Component {
       data: {
         labels,
         datasets: [{
-          label: label,
-          fill: fill,
           backgroundColor: backgroundColor || color,
-          borderColor: color,
           data: data,
+          fill: fill,
+          label: label,
+          borderColor: color,
           lineTension: 0,
           steppedLine: steppedLine,
         }]
@@ -40,14 +41,14 @@ export default class Chart extends Component {
       options: {
         elements: {
           point: {
-            radius: 0
+            radius: 0,
           }
         },
         scales: {
           yAxes: [{
             ticks: {
               beginAtZero: true,
-              stepSize: stepSize || 4
+              stepSize: stepSize || 4,
             }
           }]
         }
@@ -69,3 +70,12 @@ export default class Chart extends Component {
     );
   }
 }
+
+Chart.propTypes = {
+  color: PropTypes.string.isRequired,
+  data: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
+  fill: PropTypes.bool.isRequired,
+  label: PropTypes.string.isRequired,
+  steppedLine: PropTypes.bool.isRequired,
+  stepSize: PropTypes.number.isRequired,
+};

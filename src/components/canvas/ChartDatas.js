@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import Chart from './Chart';
 
 const ChartDatas = ({data, threshold}) => {
@@ -31,6 +32,7 @@ const ChartDatas = ({data, threshold}) => {
           fill={false}
           label='Actual Data'
           steppedLine={false}
+          stepSize={5}
         />
         <Chart
           backgroundColor={'rgba(54, 162, 235, 0.5)'}
@@ -38,11 +40,16 @@ const ChartDatas = ({data, threshold}) => {
           data={datas}
           fill={true}
           label='Areas of interest'
-          steppedLine={'before'}
+          steppedLine={false}
           stepSize={0.5}
         />
       </Fragment>
     );
 }
+
+ChartDatas.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
+  threshold: PropTypes.number.isRequired,
+};
 
 export default ChartDatas;

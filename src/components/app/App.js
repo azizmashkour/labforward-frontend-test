@@ -34,7 +34,7 @@ const App = () => {
             className="Thresholds__input"
           />
         </div>
-        <ChartDatas threshold={state.defaultThreshold} data={RawDatas.batch1}/>
+        <ChartDatas threshold={state.defaultThreshold} data={RawDatas.batch1} />
       </div>
     </div>
   );
