@@ -28,7 +28,7 @@ const ChartDatas = ({ data, threshold, t }) => {
       <Chart
         backgroundColor="rgb(255, 99, 132, 0.5)"
         color="rgb(255, 99, 132)"
-        data={data}
+        data={datas}
         fill={false}
         label="Actual Data"
         steppedLine={false}
