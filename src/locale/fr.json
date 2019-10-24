@@ -1,10 +1,6 @@
 {
   "translations" : {
-    "Change to update threshold": "Changer pour mettre à jour le seuil",
-    "Actual Data": "Données actuelles",
-    "Areas of interest": "Centres d'interêt",
-    "Sudden peaks detection": "Détection de pics soudains",
-    "Settings": "Paramètres",
-    "Switch language": "Choisir langue"
+    "Welcome to": "Bienvenue à",
+    "Switch language": "Changer la langue"
   }
 }
